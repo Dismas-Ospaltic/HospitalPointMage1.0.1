@@ -1,0 +1,53 @@
+@include_once 'config.php';
+
+ $time = time();
+$invoice_num = rand(time(), 10000000);
+$patient_name = "Dismas Wanyala";
+$residence = "Kapenguria";
+$hospital_patient_num = "PN1";
+
+if(isset($_POST["save-inv"])){
+   $invoice_num = $invoice_num;
+   $patient_name = $patient_name ;
+   $residence = $residence;
+   $hospital_patient_num = $hospital_patient_num;
+   $grand_total = mysqli_real_escape_string($conn, $_POST['grand_total']);
+   
+
+   $insert="INSERT INTO hospital_invoice(patient_name,invoice_num,patient_residence,grand_total,hospital_patient_no) 
+   values('{$patient_name}','{$invoice_num}','{$residence}','{$grand_total}','{$hospital_patient_num}')";
+   
+   $upload_new_patient_invoice= mysqli_query($conn,$insert);
+
+   if($upload_new_patient_invoice){
+     $invoice_num = $invoice_num;
+    $hospital_patient_num = $hospital_patient_num;
+
+    $insert2="INSERT INTO invoce_product(hospital_patient_no,invoice_num,product_name,qty,price,total) values ";
+   
+    $row = [];
+    for($i=0;$i<count($_POST['pname']);$i++){
+
+        $product_name = mysqli_real_escape_string($conn, $_POST['pname'][$i]);
+        $qty = mysqli_real_escape_string($conn, $_POST['qty'][$i]);
+        $price = mysqli_real_escape_string($conn, $_POST['price'][$i]);
+        $total = mysqli_real_escape_string($conn, $_POST['total'][$i]);
+        // $total = mysqli_real_escape_string($conn, $_POST['total'][$i]);
+
+        $row [$i]="('{$hospital_patient_num}','{$invoice_num}','{$product_name}','{$qty}','{$price}','{$total}')";
+    }
+    $insert2.= implode(",",$row);
+    $upload_invoice2= mysqli_query($conn,$insert2);
+    if($upload_invoice2){
+        echo '<script> alert("invoice saved successfully!");</script>';
+    }else{
+        echo '<script> alert("invoice failed to add 2");</script>';
+    }
+  }else{
+    echo '<script> alert("invoice failed to add");</script>';
+  }
+
+//    echo '<script> alert("'. $invoice_num.'." ".'. $patient_name.'." ".'.$residence.'");</script>';
+}
+
+onclick="window.history.pushState({ id: '100' },'Page 2', '/HMS/Loadlabdet.php?PN=<?php //echo $row_fetch_lab['hospital_patient_no']; ?>'); return changeLabDet();"

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hospital Management System</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA_Compatible" content="IE=edge">
+        <link rel="stylesheet" href="indexStyle.css">
+        <link rel="stylesheet" href="patientStyle.css">
+        <link rel="stylesheet" href="resources/css/all.min.css">
+        <link rel="stylesheet" href="resources/css/fontawesome.min.css">
+         <!-- Link Swiper's CSS -->
+    <link
+    rel="stylesheet"
+    href="resources/CDN-links/swiper-bundle.css"
+  />
+
+        <script src="resources/CDN-links/jquery.min.js"></script>
+    </head>
+<body>
+<section id="patient-reg-card">
+   
+    <div class="field-form">
+      
+  <form>
+  <div id="canel-field-form"><i class="fa-solid fa-times"></i></div>
+ <h2>Add New Patient</h2>
+
+ <div class="input-wrapper">
+  <label>First Name *</label>
+  <input type="text" name="text_first" placeholder="please enter first name" required>
+ </div>
+
+ <div class="input-wrapper">
+  <label>Middle Name</label>
+  <input type="text" name="text_middle" placeholder="please enter middle name">
+ </div>
+
+ <div class="input-wrapper">
+  <label>Last Name*</label>
+  <input type="text" name="text_last" placeholder="please enter last name" required>
+ </div>
+
+
+ <div class="input-wrapper">
+  <label>Age</label>
+  <input type="text" name="text_age" placeholder="please enter patient age">
+ </div>
+
+
+ <div class="input-wrapper">
+  <label>Gender</label>
+  <!-- <input type="text" placeholder="please enter last name"> -->
+  <select name="text_gender">
+    <option>--Select Gender--</option>
+     <option>male</option>
+      <option>female</option>
+  </select>
+ </div>
+
+ <div class="input-wrapper">
+  <label>Insurance Member No.</label>
+  <input type="text" name="text_opd" placeholder="please enter patient Insurance Member Number">
+ </div>
+
+ <div class="input-wrapper">
+  <label>Insurance Company</label>
+  <input type="text" name="text_opd" placeholder="please enter patient Insurance Company name">
+ </div>
+
+ 
+ <div class="input-wrapper">
+  <label>Opd NO.</label>
+  <input type="text" name="text_opd" placeholder="please enter patient Opd Number">
+ </div>
+
+ <div class="input-wrapper">
+  <label>Contact</label>
+  <input type="text" name="text_phone" placeholder="please enter patient Contact phone">
+ </div>
+
+ <div class="input-wrapper">
+  <label>Residence</label>
+  <input type="text" name="text_residence" placeholder="please enter patient Residence">
+ </div>
+
+ <div class="btn-wrapper">
+<button type="submit">Add Patient</button>
+ </div>
+
+</form>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+<main>
+  <aside id="el-scroll">
+    <p>HSM</p>
+  </aside>
+
+   <section id="upper-nav">
+   <div class="left-upper-nav">
+   <label><i class="fa-solid fa-bars"></i></label>
+   <!-- <label id="patient-rem-det-card"><i class="fa-solid fa-arrow-left"></i></label> -->
+   <h2>Patients</h2>
+   </div>
+   <div class="right-upper-nav">
+   <label><strong>Appointments History</strong><i class="fa-solid fa-angle-down"></i></label>
+
+   <div class="notify">
+ <i class="fa-solid fa-bell" id="bell"></i>
+ <i class="fa-solid fa-circle" id="circle"></i>
+   </div>
+
+   <div class="user-acc">
+   <div class="avatar">
+    <i class="fa-solid fa-user" id="user"></i>
+    <i class="fa-solid fa-circle" id="circle"></i>
+      </div>
+      <div class="user-name">
+        <p><strong>Admin</strong></p>
+        <p><small>Dismas Wanyala</small></p>
+      </div>
+    </div> 
+   </div>
+   
+
+   </section>
+   <!-- onmouseenter="changeStyle(true)" onmouseleave="changeStyle(false)" -->
+   <section id="side-bar-menu" >
+    <div class="top-menu">
+     <label><i class="fa-solid fa-angles-up"></i></label>
+    </div>
+
+    <div class="middle-menu">
+    <ul>
+       <li><a href="index.html"><i class="fa-solid fa-house-medical-circle-check"></i><span> Home</span></a></li>
+        <li><a href="patient.php" class="active"><i class="fa-solid fa-hospital-user"></i><span> patient</span></a></li>
+        <li><a href=""><i class="fa-solid fa-user-doctor"></i><span> Doctor</span></a></li>
+        <li><a href=""><i class="fa-solid fa-list-check"></i><span> Appointments</span></a></li>
+        <li><a href=""><i class="fa-solid fa-money-check-dollar"></i><span>Billing and Payment</span></a></li>
+        <li><a href=""><i class="fa-solid fa-house-medical"></i><span>Laboratory</span></a></li>
+        <li><a href=""><i class="fa-solid fa-hospital"></i><span> Hospital Resources</span></a></li>
+    </ul>
+    </div>
+
+    <div class="abt-stng">
+       <label><i class="fa-solid fa-gear"></i></label> 
+       <label><i class="fa-solid fa-info-circle"></i></label> 
+    </div>
+
+   </section>
+
+   <section id="main-content">
+    <div class="search-bar-op-btn">
+  <div class="search-wraper">
+ <input type="search" placeholder="search here...">
+ <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
+
+  <div class="op-btn-right">
+ <button><i class="fa-solid fa-add"></i> New Patient</button>
+ <div class="sort-btn">
+<label><p>Sort by</p> <i class="fa-solid fa-angle-down"></i><p id="sort-save">Default</p></label>
+<div class="sort-list">
+    <p id="1-sort">Date</p>
+    <p id="2-s">Name</p>
+    <p>number of Visits</p>
+</div>
+ </div>
+  </div>
+    </div>
+   
+
+ 
+
+<div class="patient-list">
+  <h1>Patient List</h1>
+  <div class="patient-list-body">
+  <div class="match-header">
+    <label id="s1"><strong>Name</strong></label>
+    <label id="s2"><strong>disease</strong></label>
+    <label id="s3"><strong>check in date</strong></label>
+    <label id="s4"><strong>contact</strong></label>
+    <label id="s5"><strong>contact</strong></label>
+    <label id="s6"><strong>contact</strong></label>
+  </div> 
+
+
+
+  <div class="match-body">
+    <label id="s1"><p>Dismas Wanyala</p></label>
+    <label id="s2"><p>Dismas Wanyala</p></label>
+    <label id="s3"><p>Dismas Wanyala</p></label>
+    <label id="s4"><p>Dismas Wanyala</p></label>
+    <label id="s5"><p>Dismas Wanyala</p></label>
+    <label id="s6"><p>Dismas Wanyala</p></label>
+  </div>
+
+
+  <div class="match-body">
+    <label id="s1"><p>Dismas Wanyala</p></label>
+    <label id="s2"><p>Dismas Wanyala</p></label>
+    <label id="s3"><p>Dismas Wanyala</p></label>
+    <label id="s4"><p>Dismas Wanyala</p></label>
+    <label id="s5"><p>Dismas Wanyala</p></label>
+    <label id="s6"><p>Dismas Wanyala</p></label>
+  </div>
+
+  <div class="match-body">
+    <label id="s1"><p>Dismas Wanyala</p></label>
+    <label id="s2"><p>Dismas Wanyala</p></label>
+    <label id="s3"><p>Dismas Wanyala</p></label>
+    <label id="s4"><p>Dismas Wanyala</p></label>
+    <label id="s5"><p>Dismas Wanyala</p></label>
+    <label id="s6"><p>Dismas Wanyala</p></label>
+  </div>
+
+  <div class="match-body">
+    <label id="s1"><p>Dismas Wanyala</p></label>
+    <label id="s2"><p>Dismas Wanyala</p></label>
+    <label id="s3"><p>Dismas Wanyala</p></label>
+    <label id="s4"><p>Dismas Wanyala</p></label>
+    <label id="s5"><p>Dismas Wanyala</p></label>
+    <label id="s6"><p>Dismas Wanyala</p></label>
+  </div>
+
+  <div class="match-body">
+    <label id="s1"><p>Dismas Wanyala</p></label>
+    <label id="s2"><p>Dismas Wanyala</p></label>
+    <label id="s3"><p>Dismas Wanyala</p></label>
+    <label id="s4"><p>Dismas Wanyala</p></label>
+    <label id="s5"><p>Dismas Wanyala</p></label>
+    <label id="s6"><p>Dismas Wanyala</p></label>
+  </div>
+
+
+  <div class="match-body">
+    <label id="s1"><p>Dismas Wanyala</p></label>
+    <label id="s2"><p>Dismas Wanyala</p></label>
+    <label id="s3"><p>Dismas Wanyala</p></label>
+    <label id="s4"><p>Dismas Wanyala</p></label>
+    <label id="s5"><p>Dismas Wanyala</p></label>
+    <label id="s6"><p>Dismas Wanyala</p></label>
+  </div>
+
+  <div class="match-body">
+    <label id="s1"><p>Dismas Wanyala</p></label>
+    <label id="s2"><p>Dismas Wanyala</p></label>
+    <label id="s3"><p>Dismas Wanyala</p></label>
+    <label id="s4"><p>Dismas Wanyala</p></label>
+    <label id="s5"><p>Dismas Wanyala</p></label>
+    <label id="s6"><p>Dismas Wanyala</p></label>
+  </div>
+
+
+  <div class="match-body">
+    <label id="s1"><p>Dismas Wanyala</p></label>
+    <label id="s2"><p>Dismas Wanyala</p></label>
+    <label id="s3"><p>Dismas Wanyala</p></label>
+    <label id="s4"><p>Dismas Wanyala</p></label>
+    <label id="s5"><p>Dismas Wanyala</p></label>
+    <label id="s6"><p>Dismas Wanyala</p></label>
+  </div>
+  <div class="match-body">
+    <label id="s1"><p>Dismas Wanyala</p></label>
+    <label id="s2"><p>Dismas Wanyala</p></label>
+    <label id="s3"><p>Dismas Wanyala</p></label>
+    <label id="s4"><p>Dismas Wanyala</p></label>
+    <label id="s5"><p>Dismas Wanyala</p></label>
+    <label id="s6"><p>Dismas Wanyala</p></label>
+  </div>
+
+
+  <div class="match-body">
+    <label id="s1"><p>Dismas Wanyala</p></label>
+    <label id="s2"><p>Dismas Wanyala</p></label>
+    <label id="s3"><p>Dismas Wanyala</p></label>
+    <label id="s4"><p>Dismas Wanyala</p></label>
+    <label id="s5"><p>Dismas Wanyala</p></label>
+    <label id="s6"><p>Dismas Wanyala</p></label>
+  </div>
+
+  <div class="match-body">
+    <label id="s1"><p>Dismas Wanyala</p></label>
+    <label id="s2"><p>Dismas Wanyala</p></label>
+    <label id="s3"><p>Dismas Wanyala</p></label>
+    <label id="s4"><p>Dismas Wanyala</p></label>
+    <label id="s5"><p>Dismas Wanyala</p></label>
+    <label id="s6"><p>Dismas Wanyala</p></label>
+  </div>
+
+
+  <div class="match-body">
+    <label id="s1"><p>Dismas Wanyala</p></label>
+    <label id="s2"><p>Dismas Wanyala</p></label>
+    <label id="s3"><p>Dismas Wanyala</p></label>
+    <label id="s4"><p>Dismas Wanyala</p></label>
+    <label id="s5"><p>Dismas Wanyala</p></label>
+    <label id="s6"><p>Dismas Wanyala</p></label>
+  </div>
+
+
+  <div class="match-body">
+    <label id="s1"><p>Dismas Wanyala</p></label>
+    <label id="s2"><p>Dismas Wanyala</p></label>
+    <label id="s3"><p>Dismas Wanyala</p></label>
+    <label id="s4"><p>Dismas Wanyala</p></label>
+    <label id="s5"><p>Dismas Wanyala</p></label>
+    <label id="s6"><p>Dismas Wanyala</p></label>
+  </div>
+
+
+  <div class="match-body">
+    <label id="s1"><p>Dismas Wanyala</p></label>
+    <label id="s2"><p>Dismas Wanyala</p></label>
+    <label id="s3"><p>Dismas Wanyala</p></label>
+    <label id="s4"><p>Dismas Wanyala</p></label>
+    <label id="s5"><p>Dismas Wanyala</p></label>
+    <label id="s6"><p>Dismas Wanyala</p></label>
+  </div>
+
+  <div class="match-body">
+    <label id="s1"><p>Dismas Wanyala</p></label>
+    <label id="s2"><p>Dismas Wanyala</p></label>
+    <label id="s3"><p>Dismas Wanyala</p></label>
+    <label id="s4"><p>Dismas Wanyala</p></label>
+    <label id="s5"><p>Dismas Wanyala</p></label>
+    <label id="s6"><p>Dismas Wanyala</p></label>
+  </div>
+
+
+  <div class="match-body">
+    <label id="s1"><p>Dismas Wanyala</p></label>
+    <label id="s2"><p>Dismas Wanyala</p></label>
+    <label id="s3"><p>Dismas Wanyala</p></label>
+    <label id="s4"><p>Dismas Wanyala</p></label>
+    <label id="s5"><p>Dismas Wanyala</p></label>
+    <label id="s6"><p>Dismas Wanyala</p></label>
+  </div>
+
+  <div class="match-body">
+    <label id="s1"><p>Dismas Wanyala</p></label>
+    <label id="s2"><p>Dismas Wanyala</p></label>
+    <label id="s3"><p>Dismas Wanyala</p></label>
+    <label id="s4"><p>Dismas Wanyala</p></label>
+    <label id="s5"><p>Dismas Wanyala</p></label>
+    <label id="s6"><p>Dismas Wanyala</p></label>
+  </div>
+
+
+  <div class="match-body">
+    <label id="s1"><p>Dismas Wanyala</p></label>
+    <label id="s2"><p>Dismas Wanyala</p></label>
+    <label id="s3"><p>Dismas Wanyala</p></label>
+    <label id="s4"><p>Dismas Wanyala</p></label>
+    <label id="s5"><p>Dismas Wanyala</p></label>
+    <label id="s6"><p>Dismas Wanyala</p></label>
+  </div>
+
+ 
+  <div id="zero-list-style">
+    <label><h2>No Data Available</h2></label>
+  </div>
+</div>
+</div>
+
+
+
+
+
+   </section>
+</main>
+    <footer>
+
+    </footer>
+
+
+    <script> 
+    
+    $('#main-content .search-bar-op-btn  .op-btn-right button').click(function(){
+        $('#patient-reg-card').addClass('active')
+        });
+        
+       
+        $('#canel-field-form').click(function(){
+        $('#patient-reg-card').removeClass('active')
+        });
+
+
+     
+
+
+        $(function(){ 
+
+            $("#main-content .search-bar-op-btn  .op-btn-right .sort-btn label").click(function (e) {
+    e.stopPropagation();
+    $("#main-content .search-bar-op-btn .op-btn-right .sort-btn .sort-list").addClass("isactive");
+
+});    
+$('main').click(function(){
+if( $("#main-content .search-bar-op-btn .op-btn-right .sort-btn .sort-list").hasClass("isactive") ){
+
+      $("#main-content .search-bar-op-btn .op-btn-right .sort-btn .sort-list").removeClass("isactive");
+      };
+    });
+
+    $('#main-content').click(function(){
+if( $("#main-content .search-bar-op-btn .op-btn-right .sort-btn .sort-list").hasClass("isactive") ){
+
+      $("#main-content .search-bar-op-btn .op-btn-right .sort-btn .sort-list").removeClass("isactive");
+      };
+    });
+}); 
+
+
+
+
+  </script>      
+
+</body>
+</html>

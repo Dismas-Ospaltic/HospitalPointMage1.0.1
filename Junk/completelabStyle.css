@@ -1,0 +1,83 @@
+:root{
+   
+    --main-color: royalblue;
+    --secondary-color:orangered;
+    --green: #27ae60;
+    --black: #333;
+    --white: #fff;
+    --light-bg-color: #f2f3f5;
+    --border-color: #e5e8ec;
+   
+    --color-dark: #1D2231;
+    --text-grey: #8390A2;
+    --coolor: #6ea1e9;
+    /* color: rgb(9, 240, 163) */
+  }
+
+  #search-patient-inco{
+    margin-top: 10px;
+  }
+
+  .incoming-lab-patient-list{
+    background-color: var(--white);
+    margin-top: 10px;
+  padding: .5rem;
+  }
+
+  .incoming-lab-patient-list h1{
+    padding: .5rem;
+  }
+
+  .incoming-lab-patient-list .incoming-lab-card-container{
+    padding: .5rem;
+    /* max-height: 600px; */
+    /* background: #27ae60; */
+    margin-bottom: 10px;
+    overflow-y: auto;
+    
+  }
+  #lab-single{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--light-bg-color);
+    padding: .5rem;
+    margin-top: .25rem;
+  }
+  #lab-single .left-lab{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  
+  }
+  #lab-single .left-lab label{
+  display: flex;
+  }
+  #lab-single .left-lab label span{
+   color: var(--green);
+    }
+  #lab-time{
+    color: crimson;
+  }
+  #lab-single .left-lab .specification-cont label{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  
+  
+
+  #zero-list-style label h2{
+    color: crimson;
+    text-align: center;
+    padding: .5rem;
+    }
+  
+  
+   
+  
+  
+  @media(max-width: 920px){
+  
+  }

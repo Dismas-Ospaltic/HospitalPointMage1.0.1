@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hospital Management System</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA_Compatible" content="IE=edge">
+        <link rel="stylesheet" href="indexStyle.css">
+        <link rel="stylesheet" href="doctorpatientStyle.css">
+        <link rel="stylesheet" href="resources/css/all.min.css">
+        <link rel="stylesheet" href="resources/css/fontawesome.min.css">
+         <!-- Link Swiper's CSS -->
+    <link
+    rel="stylesheet"
+    href="resources/CDN-links/swiper-bundle.css"
+  />
+
+        <script src="resources/CDN-links/jquery.min.js"></script>
+    </head>
+<body>
+
+    <section id="patient-note-card">
+   
+        <div class="field-form">
+          
+      <form>
+      <div id="canel-field-form"><i class="fa-solid fa-times"></i></div>
+     <h2>Medical Notes</h2>
+     <div class="input-wrapper">
+      <label>medical History  (use semi-colon ; to separate lines)</label>
+      <!-- <input type="text" name="text_first" placeholder="please enter first name" required> -->
+      <textarea placeholder="type patient's medical history.."></textarea>
+     </div>
+     
+     <div class="input-wrapper">
+      <label>Cheif Complaits  (use semi-colon ; to separate lines)</label>
+      <!-- <input type="text" name="text_middle" placeholder="please enter middle name"> -->
+      <textarea placeholder="type patient's Symptoms decriptions or concerns..."></textarea>
+     </div>
+    
+     <div class="input-wrapper">
+      <label>Doctors Notes  (use semi-colon ; to separate lines)</label>
+      <!-- <input type="text" name="text_last" placeholder="please enter last name" required> -->
+      <textarea placeholder="type Notes..."></textarea>
+     </div>
+    
+    
+     <div class="input-wrapper">
+      <label>Diagnosis  (use semi-colon ; to separate lines)</label>
+      <!-- <input type="text" name="text_age" placeholder="please enter patient age"> -->
+      <textarea placeholder="type probable diagnosis..."></textarea>
+     </div>
+    
+    
+    
+     <div class="input-wrapper">
+      <label>Medication & Treatment  (use semi-colon ; to separate lines)</label>
+      <!-- <input type="text" name="text_opd" placeholder="please enter patient Opd Number"> -->
+      <textarea placeholder="type the medication/treatments..."></textarea>
+     </div>
+    
+    
+     <div class="btn-wrapper">
+    <button type="submit">Save</button>
+     </div>
+    
+    </form>
+    
+        </div>
+    </section>
+
+
+
+    
+    <section id="patient-laborder-card">
+   
+      <div class="field-form">
+        
+    <form>
+    <div id="canel-field-form"><i class="fa-solid fa-times"></i></div>
+   <h2>Laboratory Test Order</h2>
+   <div class="input-wrapper">
+    <label>Specify Test (use semi-colon ; to separate lines)</label>
+    <!-- <input type="text" name="text_first" placeholder="please enter first name" required> -->
+    <textarea placeholder="type specific list of tests to be conducted..."></textarea>
+   </div>
+   
+   <div class="input-wrapper">
+    <label>Samples Collected  (use semi-colon ; to separate lines)</label>
+    <!-- <input type="text" name="text_middle" placeholder="please enter middle name"> -->
+    <textarea placeholder="type list of Samples to be collected..."></textarea>
+   </div>
+
+   <div class="input-wrapper">
+    <label>Sample No.</label>
+    <input type="text" name="text_opd" placeholder="please enter Sample Number if already collected">
+   </div>
+  
+  
+   <div class="input-wrapper">
+    <label>Other Additional Details  (use semi-colon ; to separate lines)</label>
+    <!-- <input type="text" name="text_age" placeholder="please enter patient age"> -->
+    <textarea placeholder="type any Other Additional details..."></textarea>
+   </div>
+  
+  
+  
+   <div class="btn-wrapper">
+  <button type="submit">Send</button>
+   </div>
+  
+  </form>
+  
+      </div>
+  </section>
+
+
+
+<main>
+  <aside id="el-scroll">
+    <p>HSM</p>
+  </aside>
+
+   <section id="upper-nav">
+   <div class="left-upper-nav">
+   <label><i class="fa-solid fa-bars"></i></label>
+   <!-- <label id="patient-rem-det-card"><i class="fa-solid fa-arrow-left"></i></label> -->
+   <h2>Doctor's Page</h2>
+   </div>
+   <div class="right-upper-nav">
+   <label><strong>Appointments History</strong><i class="fa-solid fa-angle-down"></i></label>
+
+   <div class="notify">
+ <i class="fa-solid fa-bell" id="bell"></i>
+ <i class="fa-solid fa-circle" id="circle"></i>
+   </div>
+
+   <div class="user-acc">
+   <div class="avatar">
+    <i class="fa-solid fa-user" id="user"></i>
+    <i class="fa-solid fa-circle" id="circle"></i>
+      </div>
+      <div class="user-name">
+        <p><strong>Admin</strong></p>
+        <p><small>Dismas Wanyala</small></p>
+      </div>
+    </div> 
+   </div>
+   
+
+   </section>
+   <!-- onmouseenter="changeStyle(true)" onmouseleave="changeStyle(false)" -->
+   <section id="side-bar-menu" >
+    <div class="top-menu">
+     <label><i class="fa-solid fa-angles-up"></i></label>
+    </div>
+
+    <div class="middle-menu">
+    <ul>
+       <li><a href="index.html"><i class="fa-solid fa-house-medical-circle-check"></i><span> Home</span></a></li>
+        <li><a href="patient.php"><i class="fa-solid fa-hospital-user"></i><span> patient</span></a></li>
+        <li><a href="" class="active"><i class="fa-solid fa-user-doctor"></i><span> Doctor</span></a></li>
+        <li><a href=""><i class="fa-solid fa-list-check"></i><span> Appointments</span></a></li>
+        <li><a href=""><i class="fa-solid fa-money-check-dollar"></i><span>Billing and Payment</span></a></li>
+        <li><a href=""><i class="fa-solid fa-house-medical"></i><span>Laboratory</span></a></li>
+        <li><a href=""><i class="fa-solid fa-hospital"></i><span> Hospital Resources</span></a></li>
+    </ul>
+    </div>
+
+    <div class="abt-stng">
+       <label><i class="fa-solid fa-gear"></i></label> 
+       <label><i class="fa-solid fa-info-circle"></i></label> 
+    </div>
+
+   </section>
+
+   <section id="main-content">
+<div class="patient-det-dis">
+<div class="patient-info">
+    <div id="avatar-name-age">
+        <img src="resources/img/user.png">
+        <label>
+          <p><strong>Deiring Fleming Daisy</strong></p>
+          <p>23 years old</p>
+        </label>
+        </div>
+
+        <div id="height-weight-blood">
+            <label>
+              <p><small>Height</small></p>
+              <p>185</p>
+            </label>
+             
+            <label>
+              <p><small>Weight</small></p>
+              <p>65 kg</p>
+            </label>
+            
+            <label>
+              <p><small>Blood Type</small></p>
+              <p>O+</p>
+            </label>
+            
+            </div>
+
+</div>
+
+<div class="med-hst">
+<h3>Medical History Notes</h3>
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+     Debitis ipsam dolorum in deleniti illo adipisci. Omnis,
+     distinctio, tempora iste saepe voluptate dignissimos 
+    eaque nostrum quis, corporis culpa odit rem voluptatum.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Debitis ipsam dolorum in deleniti illo adipisci. Omnis,
+    distinctio, tempora iste saepe voluptate dignissimos 
+   eaque nostrum quis, corporis culpa odit rem voluptatum.
+</p>
+<a href="#">Read more</a>
+<h1>No Medical History To Show</h1>
+</div>
+</div>
+
+ 
+<div id="patient-op-btns">
+    <button id="btn1"><i class="fa-solid fa-clipboard-list"></i>View patient's Records</button>
+    <button id="btn2"><i class="fa-solid fa-house-medical"></i>Order Lab Test</button>
+    <button id="btn3"><i class="fa-solid fa-list-1-2"></i>Fix Appointment</button>
+    <button id="btn4"><i class="fa-solid fa-edit"></i>Edit Patient Deteils</button>
+</div>
+   
+<div class="date-visit-container">
+    <h1>Today's Visit</h1>
+    <p>check in Reason: <small>Illness and minor injuries</small></p>
+    <div class="patient-date-op-btn">
+        <button id="btn11"><i class="fa-solid fa-add"></i>Add medical Notes</button>
+        <button id="btn22" class="disabled"><i class="fa-solid fa-house-medical"></i>View/Print Discharge summary</button>
+        <button id="btn33"><i class="fa-solid fa-list-1-2"></i>Create Invoice</button>
+    </div>
+</div>
+ 
+
+
+
+
+<section id="no-patient-det-sec">
+  <h3>No Data Available...</h3>
+</section>
+
+   </section>
+</main>
+    <footer>
+
+    </footer>
+
+
+    <script> 
+    
+   
+ 
+    $('#btn11').click(function(){
+        $('#patient-note-card').addClass('active')
+        });
+        
+       
+        $('#canel-field-form').click(function(){
+        $('#patient-note-card').removeClass('active')
+        });
+
+     
+
+        $('#btn2').click(function(){
+        $('#patient-laborder-card').addClass('active')
+        });
+        
+       
+        $('#patient-laborder-card .field-form #canel-field-form').click(function(){
+        $('#patient-laborder-card').removeClass('active')
+        });
+
+
+
+
+
+  </script>      
+
+</body>
+</html>

@@ -1,0 +1,298 @@
+:root{
+   
+    --main-color: royalblue;
+    --secondary-color:orangered;
+    --green: #27ae60;
+    --black: #333;
+    --white: #fff;
+    --light-bg-color: #f2f3f5;
+    --border-color: #e5e8ec;
+   
+    --color-dark: #1D2231;
+    --text-grey: #8390A2;
+    --coolor: #6ea1e9;
+}
+
+#main-content #doc-intro{
+    width: 100%;
+    margin: 0 auto;
+    background: var(--white);
+    padding: .5rem;
+
+}
+#main-content #doc-intro h1{
+    color: var(--main-color);
+}
+#main-content #doc-intro span{
+    color: crimson;
+}
+#main-content #doc-intro p{
+    color: var(--text-grey);
+   padding-bottom: 1rem;
+}
+#main-content #doc-intro a{
+    color: var(--white);
+    padding: .5rem 1rem;
+    background: crimson;
+    border-radius: 5px;
+  
+}
+#doc-repo-section{
+    padding-top: 1rem;
+    width: 70%;
+    margin: 0 auto;
+}
+#doc-repo-section .header-sec h3{
+    font-family: 400;
+}
+#doc-repo-section .header-sec{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+#doc-repo-section .header-sec select{
+    color: var(--main-color);
+
+}
+#doc-repo-section .doc-repo-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
+    grid-gap:.5rem;
+   
+}
+#doc-repo-section .doc-repo-cards .single-repo-card{
+background: var(--white);
+border-radius: 10px;
+padding: .5rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+cursor: pointer;
+transition: .6s ease;
+}
+#doc-repo-section .doc-repo-cards .single-repo-card:hover{
+    /* background: rgba(65,105,255, 0.3); */
+    border: 1px solid crimson;
+}
+#doc-repo-section .doc-repo-cards .single-repo-card i{
+    background: var(--light-bg-color);
+    color: crimson;
+    padding: .5rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+#doc-repo-section .doc-repo-cards .single-repo-card p{
+    color: var(--text-grey);
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+#doc-repo-section .doc-repo-cards .single-repo-card label{
+    font-size: 1.5rem;
+    padding: .5rem;
+    background: var(--main-color);
+    color: var(--white);
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+
+#search-patient-inco .search-wraper{
+    display: flex;
+    align-items: center;
+    border: 1px solid crimson;
+    height: 40px;
+    width: 40%;
+    margin-top: 1rem;
+
+}
+#search-patient-inco .search-wraper i{
+    font-size: 30px;
+    color: crimson;
+   
+}
+#search-patient-inco .search-wraper input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.2rem;
+}
+#search-patient-inco{
+    margin-top: 10px;
+}
+
+
+
+
+#main-content .inco-patient-list{
+    padding: 1rem;
+    background: var(--white);
+     width: 100%;
+     margin-top: 10px;
+    max-height: 600px;
+    
+}
+
+#main-content .inco-patient-list h1{
+    padding: .5rem;
+}
+
+#main-content .inco-patient-list .patient-list-body .match-header{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid var(--color-dark);
+    min-width: 600px;
+
+}
+#main-content .inco-patient-list .patient-list-body .match-header label{
+    color: var(--main-color);
+    margin: 0 auto;
+
+
+}
+#s1{
+    width: 20%;
+
+}
+#s2{
+    width: 30%;
+   
+}
+#s3{
+    width: 30%;
+    
+}
+#s4{
+    width: 20%;
+   
+}
+/* #s5{
+    width: 10%;
+
+}
+#s6{
+    width: 20%;
+ 
+} */
+
+.inco-patient-list .patient-list-body{
+overflow-y: auto;
+max-height: 550px;
+}
+#main-content .inco-patient-list .match-body{
+    display: flex;
+    flex-direction: row;
+   border-bottom: 1px solid var(--border-color);
+   padding-top: .5rem;
+   padding-bottom: .5rem; 
+   border-radius: 5px;
+   min-width: 600px;
+
+}
+#main-content .inco-patient-list .match-body:hover{
+    background: rgba(65,105,255, 0.3);
+}
+#main-content .inco-patient-list .match-body label{
+    margin: 0 auto;
+}
+#main-content .inco-patient-list .match-header label{
+    font-size: .8rem;
+}
+#main-content .inco-patient-list .match-body label p{
+    color: var(--color-dark);
+    font-size: .7rem;
+}
+#s1 p, #s2 p, #s3 p, #s4 p #s5 p, #s6 p{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    white-space: pre-wrap;
+}
+#zero-list-style label h2{
+color: crimson;
+text-align: center;
+padding: .5rem;
+}
+#visit-time{
+    color: crimson;  
+}
+.appointment-patient-list{
+    background-color: var(--white);
+    margin-top: 10px;
+ padding: .5rem;
+}
+.appointment-patient-list h1{
+    padding: .5rem;
+}
+.appointment-patient-list .appointment-card-container{
+    padding: .5rem;
+    max-height: 600px;
+    /* background: #27ae60; */
+    margin-bottom: 10px;
+    overflow-y: auto;
+   
+}
+#appoitment-single{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--light-bg-color);
+    padding: .5rem;
+    margin-top: .25rem;
+}
+#appoitment-single .left-apnt label{
+display: flex;
+}
+#appoitment-single .left-apnt label i{
+color: var(--main-color);
+padding: .3rem;
+background: var(--light-bg-color);
+font-size: 1.5rem;
+border-radius: 10px;
+}
+#appoitment-single .left-apnt label p{
+    padding: .3rem;  
+}
+
+#ap-time{
+    color: crimson;
+}
+#ap-res{
+    color: var(--text-grey);
+}
+.right-apnt{
+    display: flex;
+    flex-direction: column;
+}
+.right-apnt button{
+    padding: .2rem .5rem;
+    cursor: pointer;
+    margin-top: .5rem;
+    border-radius: 10px;
+    color: var(--white)
+}
+.right-apnt button:hover{
+    opacity: .7;
+}
+.right-apnt .btn1{
+    background: var(--green);
+
+}
+.right-apnt .btn2{
+    background: var(--main-color);
+    
+}
+
+.right-apnt .btn3{
+    background: crimson;
+    
+}
+
+@media(max-width: 920px){
+    #search-patient-inco .search-wraper{
+       
+        width: 90%;
+      
+    
+    }
+}

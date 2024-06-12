@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hospital Management System</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA_Compatible" content="IE=edge">
+        <link rel="stylesheet" href="indexStyle.css">
+        <link rel="stylesheet" href="invoiceStyle.css">
+        <link rel="stylesheet" href="resources/css/all.min.css">
+        <link rel="stylesheet" href="resources/css/fontawesome.min.css">
+         <!-- Link Swiper's CSS -->
+    <link
+    rel="stylesheet"
+    href="resources/CDN-links/swiper-bundle.css"
+  />
+
+        <script src="resources/CDN-links/jquery.min.js"></script>
+    </head>
+<body>
+
+    <main>
+        <div class="header-invo">
+           <label><i class="fa-solid fa-arrow-left"></i></label>
+           <h1>Hospital Invoice generator</h1>
+           </div>
+
+           <div id="invoice-add-pop">
+        <label>Invoice Added <a href="printinvoice.php?PN=PN1">View</a></label>
+           </div>
+        <div class="inv-overview">
+<div class="pro-det">
+<h2>Invoice Deteail</h2>
+<label>
+    <p>Invoice No.: <span><strong>293333</strong></span></p>
+</label>
+</div>
+<div class="cus-det">
+    <h2>Customer/Patient Deteail</h2>
+    <label>
+        <p>Name: <span><strong>Niel amstrong</strong></span></p>
+    </label>
+    <label>
+        <p>Address: <span><strong>Kapenguria Kapenguria   Kapenguria    Kapenguria    Kapenguria</strong></span></p>
+    </label>
+</div>
+</div>
+
+<div class="table-cont">
+<table class="table">
+<thead>
+    <tr>
+        <th>Product/Services</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th>Action</th>
+    </tr>
+</thead>
+<tbody id="product_tbody">
+<tr>
+    <td><input type="text" name="pname[]" placeholder="enter service/product name..." required></td>
+    <td><input type="number" name="price[]" min="1" class="price" placeholder="enter price" required></td>
+    <td><input type="number" name="qty[]" min="1" class="qty" required></td>
+    <td><input type="text" name="tota[]"  class="total" required></td>
+    <td><input type="button" value="X" class="btn-row-remove" required></td>
+</tr>
+</tbody>
+<tfoot>
+    <tr>
+        <td><input type="button" value="+ add row" id="btn-add-row"></td>
+        <td colspan="2" id="text-align">Total</td>
+        <td><input type="text" name="grand_total" id="grand_total" required></td>
+    </tr>
+</tfoot>
+</table>
+<input  id="save-btn" type="submit" value="Save invoice">
+</div>
+    </main>
+    <script>
+        $(document).ready(function(){
+            $("#btn-add-row").click(function(){
+        
+                var row ='<tr><td><input type="text" name="pname[]" placeholder="enter service/product name..." required></td><td><input type="number" name="price[]" min="1" class="price" placeholder="enter price" required></td><td><input type="number" name="qty[]" min="1" class="qty" required></td><td><input type="text" name="tota[]"  class="total" required></td><td><input type="button" value="X" class="btn-row-remove" required></td></tr>';
+                $("#product_tbody").append(row);
+            });
+            
+            $("body").on("click",".btn-row-remove",function(){
+                if(confirm("Remove row?")){
+             $(this).closest("tr").remove();
+              grand_total ();
+                }
+            });
+
+            $("body").on("keyup",".price",function(){
+               var price =Number($(this).val());
+               var qty = Number($(this).closest("tr").find(".qty").val());
+               $(this).closest("tr").find(".total").val(price*qty);
+               grand_total ();
+            });
+
+            $("body").on("keyup",".qty",function(){
+               var qty =Number($(this).val());
+               var price = Number($(this).closest("tr").find(".price").val());
+               $(this).closest("tr").find(".total").val(price*qty);
+               grand_total ();
+            });
+
+            function grand_total (){
+                var tot=0;
+                $(".total").each(function(){
+                tot += Number($(this).val());
+                });
+                $("#grand_total").val(tot);
+            }
+        });
+    </script>
+</body>
+</html>

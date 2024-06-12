@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hospital Management System</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA_Compatible" content="IE=edge">
+        <link rel="stylesheet" href="indexStyle.css">
+        <link rel="stylesheet" href="resources/css/all.min.css">
+        <link rel="stylesheet" href="resources/css/fontawesome.min.css">
+         <!-- Link Swiper's CSS -->
+    <link
+    rel="stylesheet"
+    href="resources/CDN-links/swiper-bundle.css"
+  />
+
+        <script src="resources/CDN-links/jquery.min.js"></script>
+    </head>
+<body>
+<main>
+  <aside id="el-scroll">
+    <p>HSM</p>
+  </aside>
+
+   <section id="upper-nav">
+   <div class="left-upper-nav">
+   <label class="add-menu"><i class="fa-solid fa-bars"></i></label>
+   <label class="rem-menu"><i class="fa-solid fa-bars"></i></label>
+   <h2>Home</h2>
+   </div>
+   <div class="right-upper-nav">
+   <label><strong>Appointments</strong><i class="fa-solid fa-angle-down"></i></label>
+   <a href="RRT"><i class="fa-solid fa-plus"></i>New Patient</a>
+   <div class="notify">
+ <i class="fa-solid fa-bell" id="bell"></i>
+ <i class="fa-solid fa-circle" id="circle"></i>
+   </div>
+
+   <div class="user-acc">
+   <div class="avatar">
+    <i class="fa-solid fa-user" id="user"></i>
+    <i class="fa-solid fa-circle" id="circle"></i>
+      </div>
+      <div class="user-name">
+        <p><strong>Admin</strong></p>
+        <p><small>Dismas Wanyala</small></p>
+      </div>
+    </div> 
+   </div>
+   
+
+   </section>
+   <!-- onmouseenter="changeStyle(true)" onmouseleave="changeStyle(false)" -->
+   <section id="side-bar-menu" >
+    <div class="top-menu">
+     <label><i class="fa-solid fa-angles-up"></i></label>
+    </div>
+
+    <div class="middle-menu">
+    <ul>
+       <li><a href="" class="active"><i class="fa-solid fa-house-medical-circle-check"></i><span> Home</span></a></li>
+        <li><a href=""><i class="fa-solid fa-hospital-user"></i><span> patient</span></a></li>
+        <li><a href=""><i class="fa-solid fa-user-doctor"></i><span> Doctor</span></a></li>
+        <li><a href=""><i class="fa-solid fa-list-check"></i><span> Appointments</span></a></li>
+        <li><a href=""><i class="fa-solid fa-money-check-dollar"></i><span>Billing and Payment</span></a></li>
+        <li><a href=""><i class="fa-solid fa-house-medical"></i><span>Laboratory</span></a></li>
+        <li><a href=""><i class="fa-solid fa-hospital"></i><span> Hospital Resources</span></a></li>
+    </ul>
+    </div>
+
+    <div class="abt-stng">
+       <label><i class="fa-solid fa-gear"></i></label> 
+       <label><i class="fa-solid fa-info-circle"></i></label> 
+    </div>
+
+   </section>
+   <section id="main-content">
+    
+    <section id="cards">
+   <div class="single-card">
+    <label>
+      <h3>40</h3>
+      <p><small>Patients</small></p>
+    </label>
+    <div class="card-logo">
+      <i class="fa-solid fa-hospital-user"></i>
+    </div>
+   </div>
+
+   <div class="single-card">
+    <label>
+      <h3>40</h3>
+      <p><small>Staff</small></p>
+    </label>
+    <div class="card-logo">
+      <i class="fa-solid fa-hospital-user"></i>
+    </div>
+   </div>
+   
+   <div class="single-card">
+    <label>
+      <h3>40</h3>
+      <p><small>Staff</small></p>
+    </label>
+    <div class="card-logo">
+      <i class="fa-solid fa-hospital-user"></i>
+    </div>
+   </div>
+
+   
+   <div class="single-card">
+    <label>
+      <h3>40</h3>
+      <p><small>Staff</small></p>
+    </label>
+    <div class="card-logo">
+      <i class="fa-solid fa-hospital-user"></i>
+    </div>
+   </div>
+
+   <div class="single-card">
+    <label>
+      <h3>40</h3>
+      <p><small>Staff</small></p>
+    </label>
+    <div class="card-logo">
+      <i class="fa-solid fa-hospital-user"></i>
+    </div>
+   </div>
+
+   <div class="single-card">
+    <label>
+      <h3>40</h3>
+      <p><small>Staff</small></p>
+    </label>
+    <div class="card-logo">
+      <i class="fa-solid fa-hospital-user"></i>
+    </div>
+   </div>
+    </section>
+
+<section id="cards-2">
+  <div class="appointment-card">
+<p>Todays Appointments</p>
+<h3>28999</h3>
+  </div>
+
+  <div class="resources-card">
+    <p><strong>Available Hospital equpments</strong></p>
+    <div class="resource-list">
+   <label>
+    <p id="single-resource">wheelchairs</p>
+    <p id="num">4</p>
+   </label>
+
+   <label>
+    <p id="single-resource">Beds</p>
+    <p id="num">4</p>
+   </label>
+
+   <label>
+    <p id="single-resource">Wards fffffff ggghh hhjjjj jjhhhghgg</p>
+    <p id="num">4</p>
+   </label>
+
+   <label>
+    <p id="single-resource">MRI Machines</p>
+    <p id="num">4</p>
+   </label>
+
+   <label>
+    <p id="single-resource">Beds</p>
+    <p id="num">4</p>
+   </label>
+
+   <label>
+    <p id="single-resource">Wards fffffff ggghh hhjjjj jjhhhghgg</p>
+    <p id="num">4</p>
+   </label>
+
+   <label>
+    <p id="single-resource">MRI Machines</p>
+    <p id="num">4</p>
+   </label>
+   <label>
+    <p id="single-resource">Beds</p>
+    <p id="num">4</p>
+   </label>
+
+   <label>
+    <p id="single-resource">Wards fffffff ggghh hhjjjj jjhhhghgg</p>
+    <p id="num">4</p>
+   </label>
+
+   <label>
+    <p id="single-resource">MRI Machines</p>
+    <p id="num">4</p>
+   </label>
+  
+  </div>
+      </div>
+
+      <div class="staff-list">
+        <p><strong>Available Hospital equpments</strong></p>
+    <div class="inner-staff-list">
+   <label>
+    <p id="single-staff">Dismas Wanyala</p>
+    <p id="des">Doctor</p>
+   </label>
+   <label>
+    <p id="single-staff">Dismas Wanyala</p>
+    <p id="des">Doctor</p>
+   </label>
+   <label>
+    <p id="single-staff">Dismas Wanyala kizai</p>
+    <p id="des">Doctor</p>
+   </label>
+
+   <label>
+    <p id="single-staff">Dismas Wanyala</p>
+    <p id="des">Doctor</p>
+   </label>
+   <label>
+    <p id="single-staff">Dismas Wanyala</p>
+    <p id="des">Doctor</p>
+   </label>
+   <label>
+    <p id="single-staff">Dismas Wanyala kizai</p>
+    <p id="des">Doctor</p>
+   </label>
+
+   <label>
+    <p id="single-staff">Dismas Wanyala</p>
+    <p id="des">Doctor</p>
+   </label>
+  
+   <label>
+    <p id="single-staff">Dismas Wanyala kizai</p>
+    <p id="des">Doctor</p>
+   </label>
+
+   <label>
+    <p id="single-staff">Dismas Wanyala</p>
+    <p id="des">Doctor</p>
+   </label>
+   <label>
+    <p id="single-staff">Dismas Wanyala</p>
+    <p id="des">Doctor</p>
+   </label>
+   <label>
+    <p id="single-staff">Dismas Wanyala kizai</p>
+    <p id="des">Doctor</p>
+   </label>
+
+   <label>
+    <p id="single-staff">Dismas Wanyala</p>
+    <p id="des">Doctor</p>
+   </label>
+
+   <label>
+    <p id="single-staff">Dismas Wanyala kizai</p>
+    <p id="des">Doctor</p>
+   </label>
+
+   <label>
+    <p id="single-staff">Dismas Wanyala</p>
+    <p id="des">Doctor</p>
+   </label>
+   <label>
+    <p id="single-staff">Dismas Wanyala</p>
+    <p id="des">Doctor</p>
+   </label>
+   <label>
+    <p id="single-staff">Dismas Wanyala kizai</p>
+    <p id="des">Doctor</p>
+   </label>
+
+   <label>
+    <p id="single-staff">Dismas Wanyala</p>
+    <p id="des">Doctor</p>
+   </label>
+
+   <label>
+    <p id="single-staff">Dismas Wanyala kizai</p>
+    <p id="des">Doctor</p>
+   </label>
+
+   <label>
+    <p id="single-staff">Dismas Wanyala</p>
+    <p id="des">Doctor</p>
+   </label>
+   <label>
+    <p id="single-staff">Dismas Wanyala</p>
+    <p id="des">Doctor</p>
+   </label>
+   <label>
+    <p id="single-staff">Dismas Wanyala kizai</p>
+    <p id="des">Doctor</p>
+   </label>
+
+   <label>
+    <p id="single-staff">Dismas Wanyala</p>
+    <p id="des">Doctor</p>
+   </label>
+  
+      </div>
+      </div>
+</section>
+
+   <section id="statistics">
+    <div class="stat-header">
+      <label><p><Strong>Patient Visits</Strong></p></label>
+      <div class="stat-btns">
+       <button>Yearly</button> 
+       <button>monthly</button> 
+       <button>weekly</button> 
+      </div>
+    </div>
+    <div class="graph-plot swiper">
+      <div class="slide-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <p>year: <span><strong>2023</strong></span></p>
+            <div class="graph-container">
+              <div class="bar" style="height: 60%;">60%</div>
+              <div class="bar" style="height: 30%;">30%</div>
+              <div class="bar" style="height: 40%;">40%</div>
+              <div class="bar" style="height: 80%;">80%</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <p>year: <span><strong>2022</strong></span></p>
+          </div>
+
+          <div class="swiper-slide">
+            <p>year: <span><strong>2021</strong></span></p>
+          </div>
+          
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+      </div>
+      
+    </div>
+    
+   </section>
+   </section>
+</main>
+    <footer>
+
+    </footer>
+
+ 
+    <script>
+      // $(function(){
+      //   $('#side-bar-menu').hover(
+      //     function(){
+      //       $('#side-bar-menu .middle-menu ul').addClass('hovered');
+      //     }
+      //   );
+      //   $('#side-bar-menu .middle-menu ul').hover(function(){},function(){
+    
+      //     $(this).removeClass('hovered');
+      //   })
+      // });
+
+
+    
+  
+
+
+
+
+      function changeStyle(isHovered) {
+  if (isHovered) {
+    $("#side-bar-menu .middle-menu ul").addClass("hovered");
+  } else {
+    $("#side-bar-menu .middle-menu ul").removeClass("hovered");
+  }
+
+  if (isHovered) {
+    $("#side-bar-menu .middle-menu ul li a").addClass("hovered");
+  } else {
+    $("#side-bar-menu .middle-menu ul li a").removeClass("hovered");
+  }
+  if (isHovered) {
+    $("#side-bar-menu .middle-menu ul li a span").addClass("hovered");
+  } else {
+    $("#side-bar-menu .middle-menu ul li a span").removeClass("hovered");
+  }
+  
+}
+
+
+     </script>
+
+<!-- Swiper JS -->
+<script src="resources/CDN-links/swiper-bundle.min.js"></script>
+ <!-- Initialize Swiper -->
+ <script>
+  //  
+  var swiper = new Swiper(".slide-container", {
+    slidesPerView: 1,
+    // slidesPerGroup: 4,
+    spaceBetween: 10,
+    centerSlide: "true",
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+</body>
+</html>

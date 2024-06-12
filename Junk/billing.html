@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hospital Management System</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA_Compatible" content="IE=edge">
+        <link rel="stylesheet" href="indexStyle.css">
+        <link rel="stylesheet" href="billingStyle.css">
+        <link rel="stylesheet" href="resources/css/all.min.css">
+        <link rel="stylesheet" href="resources/css/fontawesome.min.css">
+         <!-- Link Swiper's CSS -->
+    <link
+    rel="stylesheet"
+    href="resources/CDN-links/swiper-bundle.css"
+  />
+
+        <script src="resources/CDN-links/jquery.min.js"></script>
+    </head>
+<body>
+<main>
+  <aside id="el-scroll">
+    <p>HSM</p>
+  </aside>
+
+   <section id="upper-nav">
+   <div class="left-upper-nav">
+   <label class="add-menu"><i class="fa-solid fa-bars"></i></label>
+   <h2>Billing & Payment</h2>
+   </div>
+   <div class="right-upper-nav">
+   <label><strong>Appointments</strong><i class="fa-solid fa-angle-down"></i></label>
+   <a href="RRT"><i class="fa-solid fa-plus"></i>New Patient</a>
+   <div class="notify">
+ <i class="fa-solid fa-bell" id="bell"></i>
+ <i class="fa-solid fa-circle" id="circle"></i>
+   </div>
+
+   <div class="user-acc">
+   <div class="avatar">
+    <i class="fa-solid fa-user" id="user"></i>
+    <i class="fa-solid fa-circle" id="circle"></i>
+      </div>
+      <div class="user-name">
+        <p><strong>Admin</strong></p>
+        <p><small>Dismas Wanyala</small></p>
+      </div>
+    </div> 
+   </div>
+   
+
+   </section>
+   <!-- onmouseenter="changeStyle(true)" onmouseleave="changeStyle(false)" -->
+   <section id="side-bar-menu" >
+    <div class="top-menu">
+     <label><i class="fa-solid fa-angles-up"></i></label>
+    </div>
+
+    <div class="middle-menu">
+    <ul>
+       <li><a href="index.html"><i class="fa-solid fa-house-medical-circle-check"></i><span> Home</span></a></li>
+        <li><a href="patient.php"><i class="fa-solid fa-hospital-user"></i><span> patient</span></a></li>
+        <li><a href="doctor.php"><i class="fa-solid fa-user-doctor"></i><span> Doctor</span></a></li>
+        <li><a href=""><i class="fa-solid fa-list-check"></i><span> Appointments</span></a></li>
+        <li><a href="billing.php"  class="active"><i class="fa-solid fa-money-check-dollar"></i><span>Billing and Payment</span></a></li>
+        <li><a href=""><i class="fa-solid fa-house-medical"></i><span>Laboratory</span></a></li>
+        <li><a href=""><i class="fa-solid fa-hospital"></i><span> Hospital Resources</span></a></li>
+    </ul>
+    </div>
+
+    <div class="abt-stng">
+       <label><i class="fa-solid fa-gear"></i></label> 
+       <label><i class="fa-solid fa-info-circle"></i></label> 
+    </div>
+
+   </section>
+   <section id="main-content">
+    
+    <div id="invoice-add-pop">
+        <label>Invoice Added <a href="printinvoice.php?PN=PN1">View</a></label>
+           </div>
+        <div class="inv-overview">
+<div class="pro-det">
+<h2>Invoice Deteail</h2>
+<label>
+    <p>Invoice No.: <span><strong>293333</strong></span></p>
+</label>
+
+<label>
+    <p>Invoice Date: <span><strong>2023-06-07</strong></span></p>
+</label>
+
+<!-- <label>
+    <p>Invoice No.: <span><strong>293333</strong></span></p>
+</label> -->
+</div>
+<div class="cus-det">
+    <h2>Customer/Patient Deteail</h2>
+   
+    <div class="input-wrapper">
+        <label>Hospital Reg No.*</label>
+        <input type="text" name="text_hreg" placeholder="please enter unique patient No." required>
+       </div>
+
+       <div class="input-wrapper">
+        <label>ODP No.*</label>
+        <input type="text" name="text_hreg" placeholder="please enter unique patient No." required>
+       </div>
+
+    <div class="input-wrapper">
+        <label>Name *</label>
+        <input type="text" name="text_name" placeholder="please enter first name" required>
+       </div>
+      
+
+       <div class="input-wrapper">
+        <label>Contact</label>
+        <input type="text" name="text_phone" placeholder="please enter patient Contact phone">
+       </div>
+   
+</div>
+</div>
+ 
+<div class="table-cont">
+<table class="table" width="100%">
+<thead>
+    <tr>
+        <th>Product/Services</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th>Action</th>
+    </tr>
+</thead>
+<tbody id="product_tbody">
+<tr>
+    <td><input type="text" name="pname[]" placeholder="enter service/product name..." required></td>
+    <td><input type="number" name="price[]" min="1" class="price" placeholder="enter price" required></td>
+    <td><input type="number" name="qty[]" min="1" class="qty" required></td>
+    <td><input type="text" name="total[]"  class="total" required></td>
+    <td><input type="button" value="X" class="btn-row-remove" required></td>
+</tr>
+</tbody>
+<tfoot>
+    <tr>
+        <td><input type="button" value="+ add row" id="btn-add-row"></td>
+        <td colspan="2" id="text-align">Total</td>
+        <td><input type="text" name="grand_total" id="grand_total" required></td>
+    </tr>
+</tfoot>
+</table>
+<input  id="save-btn" type="submit" value="Save invoice">
+</div>
+
+
+   </section>
+</main>
+    <footer>
+
+    </footer>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn-add-row").click(function(){
+        
+                var row ='<tr><td><input type="text" name="pname[]" placeholder="enter service/product name..." required></td><td><input type="number" name="price[]" min="1" class="price" placeholder="enter price" required></td><td><input type="number" name="qty[]" min="1" class="qty" required></td><td><input type="text" name="total[]"  class="total" required></td><td><input type="button" value="X" class="btn-row-remove" required></td></tr>';
+                $("#product_tbody").append(row);
+            });
+            $("body").on("click",".btn-row-remove",function(){
+                if(confirm("Remove row?")){
+             $(this).closest("tr").remove();
+              grand_total ();
+                }
+            });
+            $("body").on("keyup",".price",function(){
+               var price =Number($(this).val());
+               var qty = Number($(this).closest("tr").find(".qty").val());
+               $(this).closest("tr").find(".total").val(price*qty);
+               grand_total ();
+            });
+
+            $("body").on("keyup",".qty",function(){
+               var qty =Number($(this).val());
+               var price = Number($(this).closest("tr").find(".price").val());
+               $(this).closest("tr").find(".total").val(price*qty);
+               grand_total ();
+            });
+
+            function grand_total (){
+                var tot=0;
+                $(".total").each(function(){
+                tot += Number($(this).val());
+                });
+                $("#grand_total").val(tot);
+            }
+        });
+    </script>
+
+
+</body>
+</html>

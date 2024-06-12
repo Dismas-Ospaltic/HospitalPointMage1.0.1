@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hospital Management System</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA_Compatible" content="IE=edge">
+        <link rel="stylesheet" href="indexStyle.css">
+        <link rel="stylesheet" href="labviewStyle.css">
+        <link rel="stylesheet" href="resources/css/all.min.css">
+        <link rel="stylesheet" href="resources/css/fontawesome.min.css">
+         <!-- Link Swiper's CSS -->
+    <link
+    rel="stylesheet"
+    href="resources/CDN-links/swiper-bundle.css"
+  />
+
+        <script src="resources/CDN-links/jquery.min.js"></script>
+    </head>
+<body>
+
+  <section id="add-labtest-card">
+   
+    <div class="field-form">
+      
+  <form>
+  <div id="canel-field-form"><i class="fa-solid fa-times"></i></div>
+ <h2>Add Lab Tests</h2>
+
+ <div class="input-wrapper">
+  <label>List Tests  (use semi-colon ; to separate lines)</label>
+  <!-- <input type="text" name="text_first" placeholder="please enter first name" required> -->
+  <textarea placeholder="type list of test conducted..."></textarea>
+ </div>
+
+ <div class="input-wrapper">
+  <label>Sample Collected (use semi-colon ; to separate lines)</label>
+  <!-- <input type="text" name="text_middle" placeholder="please enter middle name"> -->
+  <textarea placeholder="type list of samples obtained from a patient..."></textarea>
+ </div>
+
+ 
+ <div class="input-wrapper">
+  <label>Sample No.</label>
+  <input type="text" name="text_opd" placeholder="please enter Sample Number if already collected">
+ </div>
+
+
+ <div class="input-wrapper">
+  <label>Test Results & Conclusions (use semi-colon ; to separate lines)</label>
+  <!-- <input type="text" name="text_middle" placeholder="please enter middle name"> -->
+  <textarea placeholder="type the test results & the Conclusions..."></textarea>
+ </div>
+
+
+ <div class="input-wrapper">
+  <label>Other Specifications (use semi-colon ; to separate lines)</label>
+  <!-- <input type="text" name="text_middle" placeholder="please enter middle name"> -->
+  <textarea placeholder="type any other additional notes..."></textarea>
+ </div>
+
+ <div class="btn-wrapper">
+<button type="submit">Save</button>
+ </div>
+
+</form>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<main>
+  <aside id="el-scroll">
+    <p>HSM</p>
+  </aside>
+ 
+   <section id="upper-nav">
+   <div class="left-upper-nav">
+   <label class="add-menu"><i class="fa-solid fa-bars"></i></label>
+   <h2>Laboratory</h2>
+   </div>
+   <div class="right-upper-nav">
+   <label><strong>Appointments</strong><i class="fa-solid fa-angle-down"></i></label>
+   <a href="RRT"><i class="fa-solid fa-plus"></i>New Patient</a>
+   <div class="notify">
+ <i class="fa-solid fa-bell" id="bell"></i>
+ <i class="fa-solid fa-circle" id="circle"></i>
+   </div>
+
+   <div class="user-acc">
+   <div class="avatar">
+    <i class="fa-solid fa-user" id="user"></i>
+    <i class="fa-solid fa-circle" id="circle"></i>
+      </div>
+      <div class="user-name">
+        <p><strong>Admin</strong></p>
+        <p><small>Dismas Wanyala</small></p>
+      </div>
+    </div> 
+   </div>
+   
+
+   </section>
+   <!-- onmouseenter="changeStyle(true)" onmouseleave="changeStyle(false)" -->
+   <section id="side-bar-menu" >
+    <div class="top-menu">
+     <label><i class="fa-solid fa-angles-up"></i></label>
+    </div>
+
+    <div class="middle-menu">
+    <ul>
+       <li><a href="index.html"><i class="fa-solid fa-house-medical-circle-check"></i><span> Home</span></a></li>
+        <li><a href="patient.php"><i class="fa-solid fa-hospital-user"></i><span> patient</span></a></li>
+        <li><a href="doctor.php"><i class="fa-solid fa-user-doctor"></i><span> Doctor</span></a></li>
+        <li><a href=""><i class="fa-solid fa-list-check"></i><span> Appointments</span></a></li>
+        <li><a href="billing.php"><i class="fa-solid fa-money-check-dollar"></i><span>Billing and Payment</span></a></li>
+        <li><a href="laboratory.php" class="active"><i class="fa-solid fa-house-medical"></i><span>Laboratory</span></a></li>
+        <li><a href=""><i class="fa-solid fa-hospital"></i><span> Hospital Resources</span></a></li>
+    </ul>
+    </div>
+
+    <div class="abt-stng">
+       <label><i class="fa-solid fa-gear"></i></label> 
+       <label><i class="fa-solid fa-info-circle"></i></label> 
+    </div>
+
+   </section>
+   <section id="main-content">
+
+      <div class="incoming-lab-patient-list">
+        <h1>Incoming Lab Test Order</h1>
+       <div class="incoming-lab-card-container">
+        
+        <div id="lab-single">
+          <div class="left-lab">
+          <label><strong>patient Name: </strong><span>Dismas wanyala</span></label>
+          <label><strong>Reg No: </strong><span>PN1</span></label>
+          <label><strong>OPD No.: </strong><span>156/22</span></label>
+          <label><strong>Sample No.: </strong><span>156/22</span></label>
+          <label><strong>Ordered By: </strong><span>Hellen sharpe</span></label>
+          <label><strong>Date: </strong><span>2023-06-09</span><span> at 12:00</span></label>
+          <div class="specification-cont">
+        <label><p><strong>Specified Tests: </strong></p>
+                <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi qui ipsam, iusto minus aliquam est tempora animi doloremque placeat sunt minima, aperiam voluptatibus et possimus quisquam officiis sapiente? Nesciunt, magnam?
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi qui ipsam, iusto minus aliquam est tempora animi doloremque placeat sunt minima, aperiam voluptatibus et possimus quisquam officiis sapiente? Nesciunt, magnam?
+              </p>
+        </label> 
+
+        <label><p><strong>Sample Collected: </strong></p>
+            <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi qui ipsam, iusto minus aliquam est tempora animi doloremque placeat sunt minima, aperiam voluptatibus et possimus quisquam officiis sapiente? Nesciunt, magnam?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi qui ipsam, iusto minus aliquam est tempora animi doloremque placeat sunt minima, aperiam voluptatibus et possimus quisquam officiis sapiente? Nesciunt, magnam?
+          </p>
+        </label> 
+
+        <label><p><strong>Other Specifications: </strong></p>
+            <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi qui ipsam, iusto minus aliquam est tempora animi doloremque placeat sunt minima, aperiam voluptatibus et possimus quisquam officiis sapiente? Nesciunt, magnam?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi qui ipsam, iusto minus aliquam est tempora animi doloremque placeat sunt minima, aperiam voluptatibus et possimus quisquam officiis sapiente? Nesciunt, magnam?
+          </p>
+        </label> 
+                
+            </div>
+           </div>
+           <div class="right-lab">
+             <!-- <button class="btn1">View More</button> -->
+             <button class="btn2">Add Test Results</button>
+             <button class="btn3">Send To Doctor</button>
+           </div>
+        </div>
+
+    
+
+        <div id="zero-list-style">
+          <label><h2>No Data Available</h2></label>
+        </div>
+    
+       </div>
+      </div>
+   
+
+
+ 
+
+
+
+   </section>
+</main>
+    <footer>
+
+    </footer>
+
+    <script> 
+    
+   
+ 
+      $('.btn2').click(function(){
+          $('#add-labtest-card').addClass('active')
+          });
+          
+         
+          $('#canel-field-form').click(function(){
+          $('#add-labtest-card').removeClass('active')
+          });
+  
+       
+        //   $('.btn11').click(function(){
+        //   $('#comp-detail-card').addClass('active')
+        //   });
+          
+         
+        //   $('#comp-detail-card .list-sec #canel-list-sec').click(function(){
+        //   $('#comp-detail-card').removeClass('active')
+        //   });
+  
+  
+  
+  
+  
+  
+  
+    </script> 
+
+</body>
+</html>

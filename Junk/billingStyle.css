@@ -1,0 +1,131 @@
+:root{
+   
+    --main-color: royalblue;
+    --secondary-color:orangered;
+    --green: #27ae60;
+    --black: #333;
+    --white: #fff;
+    --light-bg-color: #f2f3f5;
+    --border-color: #e5e8ec;
+   
+    --color-dark: #1D2231;
+    --text-grey: #8390A2;
+    --coolor: #6ea1e9;
+    /* color: rgb(9, 240, 163) */
+}
+.inv-overview{
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    background: var(--white);
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 97%;
+    border-radius: 10px;
+}
+.cus-det h2,
+.pro-det h2{
+color: var(--main-color);
+}
+.pro-det{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.cus-det{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.table-cont{
+   
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 97%;
+    border-radius: 10px;
+    background: var(--white);
+    padding: 1rem;
+}
+.table-cont table{
+    border-collapse: collapse;
+    width: 100%;
+}
+.table-cont table td{
+    width: 50%;
+    border: 1px solid var(--border-color);
+    font-size: 13px;
+    padding: 10px;
+ }
+
+ .table-cont table td input[type="text"]{
+    border: 1px solid var(--color-dark);
+    background: var(--light-bg-color);
+    color: var(--color-dark);
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+ }
+ .table-cont table td input[type="number"]{
+    background: var(--light-bg-color);
+    color: var(--color-dark);
+    height: 30px;
+    border-radius: 10px;
+ }
+ .table-cont table tbody td input[type="button"]{
+color: var(--white);
+background: crimson;
+padding: .5rem;
+border-radius: 10px;
+ }
+ .table-cont table tfoot td input[type="button"]{
+color: var(--white);
+background: var(--main-color);
+padding: .5rem 1rem;
+border-radius: 10px;
+ }
+ #text-align{
+    text-align: right;
+ }
+ #save-btn{
+    padding: .5rem 1rem;
+    color: var(--white);
+    background: crimson;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    /* float: right; */
+ }
+ #invoice-add-pop{
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 97%;
+    border-radius: 10px;
+    background: var(--white);
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+     color: var(--green);
+ }
+
+.cus-det .input-wrapper{
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 10px; */
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 100%;
+    /* background: #1D2231; */
+    }
+    .cus-det .input-wrapper input{
+        padding: .5rem;
+        border: 1px solid var(--text-grey);
+        width: 100%;
+        height: 100%;
+        font-size: 1.1rem;
+        border-radius: 10px;
+    
+    }
+    .cus-det .input-wrapper label{
+        font-size: 1.1rem;
+        color: var(--main-color);
+    }
